@@ -22,6 +22,12 @@ const dbNames = [
   "cs_remark",
 ];
 
+/** 
+ * @abstract 把数据库的字段名，转换为前端需要的CamelCase
+ * @author liubin
+ * @param {string} dbName 数据库字段
+ * @param {string} prefix 数据库字段的前缀
+ **/
 const dbNameToJsName = (dbName, prefix) => {
   const reg = new RegExp(prefix, "g");
   return dbName
